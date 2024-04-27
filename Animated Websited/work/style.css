@@ -1,0 +1,426 @@
+@font-face {
+    font-family: neue hass;
+    src: url(./assets/NeueHaasDisplayMediu.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neue hass;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#main {
+    position: relative;
+    z-index: 100;
+}
+
+#page1 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+    padding-bottom: 2vw;
+}
+.gooye-container{
+    height: 100%;
+    position: absolute;
+    left: 30%;
+    bottom: 5%;
+}
+.gooye{
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    background:linear-gradient(210deg,orange,red 90%);
+    position: sticky;
+    top: 10%;
+    filter: blur(10px);
+    animation-name: gooyeanima;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gooyeanima {
+    from{
+        filter: blur(10px);
+        transform: translate(0%,-7%) skew(0deg);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-15%,15%) skew(-6deg);
+    }
+}
+/* navber styling */
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 9.6vw;
+}
+
+#nav-btn {
+    display: flex;
+    gap: 1vw;
+}
+
+#nav-btn h4 {
+    padding: 13px 23px;
+    border: 1px solid rgba(7, 7, 7, 0.4);
+    border-radius: 50px;
+    color: black;
+    font-weight: 500;
+    font-size: 19px;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+#nav-btn h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+#nav-btn h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-btn h4 a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.821);
+    position: relative;
+    z-index: 9;
+}
+
+#nav-btn h4:hover a {
+    color: #FFFFFF;
+}
+
+.page1-content{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 4vw;
+}
+
+.page1-content h1{
+    padding-top: 2vw;
+    font-size: 10vw;
+    font-family: neue hass;
+}
+.work-filter {
+    position: sticky;
+    top: 20px;
+    overflow: visible;
+    z-index: 999;
+}
+.page1-static-links{
+    position: relative;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(239, 234, 227, .6);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 22%;
+    padding: 14px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 1.3vw;
+    z-index: 999;
+}
+.page1-static-links a{
+    text-decoration: none;
+    color: rgb(67, 67, 67);
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.page1-cards {
+    margin-top: 2vw;
+    width: 100%;
+    min-height: 100%;
+}
+
+.cards {
+    width: 96%;
+    min-height: 100%;
+    top: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    padding: 60px;
+    min-width: 30%;
+    min-height: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+.card a{
+    text-decoration: none;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+    padding-bottom: 2vw;
+}
+.card-img{
+    width: 23vw;
+    height: 16vw;
+    background-image: url(./assets/adidasKth.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:saturation;
+}
+.card-img2{
+    width: 22vw;
+    height: 28vw;
+    background-image: url(./assets/neverDone-work.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-img3{
+    width: 23vw;
+    height: 16vw;
+    background-image: url(./assets/nflDraftLassVegas-work.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card h1{
+    font-size: 1.5vw;
+}
+.card p{
+    font-size: 1.2vw;
+    color: rgba(171, 171, 171, 0.884);
+
+}
+
+
+
+#page6 {
+    height: 110vh;
+    width: 100%;
+    position: relative;
+}
+
+.footer {
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 99;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: neue hass;
+}
+
+.footer span h1 {
+    font-size: 23vw;
+}
+
+.footer-content {
+    position: relative;
+    top: 5vw;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.footer-links {
+    font-size: 1vw;
+    font-family: neue hass;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10vw;
+
+}
+
+.footer-links h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links h1 a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer-form {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-top: 5vw;
+}
+
+.footer-form p {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1.2vw;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+.footer-form #input {
+    position: relative;
+    margin-top: 2vw;
+
+}
+
+.footer-form #input input {
+    background-color: transparent;
+    padding: 12px;
+    width: 15vw;
+    font-size: 1vw;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.footer-form #input button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-left: -3px;
+    padding-bottom: 12.5px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+
+.footer-shape1 {
+    position: absolute;
+    width: 93em;
+    height: 33em;
+    top: -12em;
+    bottom: auto;
+    left: -19em;
+    right: auto;
+    background-color: #fe2f06;
+    filter: blur(40px);
+    animation-name: footeranima-shape1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.footer-shape2 {
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: -40em;
+    width: 103em;
+    height: 35em;
+    background-color: #fe2f06;
+    filter: blur(40px);
+    animation-name: footeranima-shape2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes footeranima-shape1 {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes footeranima-shape2 {
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(50deg);
+    }
+}
+
+#footer-bottom {
+    border-top: 1px solid gray;
+    height: 10vh;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+
+#footer-bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+#full-scr {
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+
+#full-div1 {
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}

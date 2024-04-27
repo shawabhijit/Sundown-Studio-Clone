@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    height: 100%;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: static;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden; /* Prevent horizontal scrollbar overflow */
+}
+
+.swiper-wrapper {
+    width: 100%; /* Ensure swiper takes full container width */
+    white-space: nowrap;
+    overflow: scroll; /* Enable horizontal scrolling */
+    cursor: grab; /* Set grab cursor for visual indication */
+}
+
+.swiper-slide {
+    display: inline-block; /* Allow side-by-side display of slides */
+    width: 90vw; /* Adjust slide width as needed */
+    margin-right: 2vw; /* Add spacing between slides */
+    border-radius: 20px;
+}
+
+.content img {
+    width: 100%; /* Images fill entire slide */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 20px;
+}
+
+/* Optional: Additional styling for hover/active states */
+.swiper-slide:hover {
+    opacity: 0.8; /* Add hover effect */
+}
+
+.swiper-slide.swiper-slide-active {
+    opacity: 1; /* Reset hover opacity for active slide */
+}

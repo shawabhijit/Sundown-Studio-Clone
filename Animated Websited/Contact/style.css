@@ -1,0 +1,361 @@
+@font-face {
+    font-family: neue hass;
+    src: url(./assets/NeueHaasDisplayMediu.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neue hass;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#main {
+    position: relative;
+    z-index: 100;
+}
+
+#page1 {
+    /* border: 2px solid green; */
+    position: relative;
+    min-height: 110vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+}
+.gooye-container{
+    position: absolute;
+    right: 25%;
+    bottom: 20%;
+}
+.gooye{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background:linear-gradient(210deg,orange,red 90%);
+    position: sticky;
+    filter: blur(20px);
+    animation-name: gooyeanima;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gooyeanima {
+    from{
+        transform: translate(10%,-10%) skew(0deg);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-10deg);
+    }
+}
+/* navber styling */
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 9.6vw;
+}
+
+#nav-btn {
+    display: flex;
+    gap: 1vw;
+}
+
+#nav-btn h4 {
+    padding: 13px 23px;
+    border: 1px solid rgba(7, 7, 7, 0.4);
+    border-radius: 50px;
+    color: black;
+    font-weight: 500;
+    font-size: 19px;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+#nav-btn h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+#nav-btn h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-btn h4 a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.821);
+    position: relative;
+    z-index: 9;
+}
+
+#nav-btn h4:hover a {
+    color: #FFFFFF;
+}
+
+.page1-content{
+    width: 100%;
+    min-height:80%;
+    display: flex;
+    gap: 6vw;
+    padding: 8vw 0;
+}
+#paeg1-map-img{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+#paeg1-map-img img{
+    margin-top: -20px;
+    margin-left: -10px;
+    width: 70%;
+    border-radius: 50%;
+}
+
+#page1-contact{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+#email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#page1-contact h1{
+    font-size: 7vw;
+    line-height: 6vw;
+}
+#email a{
+    text-decoration: none;
+    font-size: 1.8vw;
+    padding-top: 1vw;
+    padding-bottom: 5px;
+    z-index: 99;
+    color: black;
+}
+#email a:hover{
+    text-decoration: underline;
+}
+#page1-address{
+    z-index: 100;
+    font-size: 1.5vw;
+    position: relative;
+    top: 3vw;
+}
+#page1-address p{
+    width: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.41);
+}
+
+
+
+
+
+
+
+
+#page6 {
+    height: 110vh;
+    width: 100%;
+    position: relative;
+}
+
+.footer {
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 99;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: neue hass;
+}
+
+.footer span h1 {
+    font-size: 23vw;
+}
+
+.footer-content {
+    position: relative;
+    top: 5vw;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.footer-links {
+    font-size: 1vw;
+    font-family: neue hass;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10vw;
+
+}
+
+.footer-links h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links h1 a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer-form {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-top: 5vw;
+}
+
+.footer-form p {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1.2vw;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+.footer-form #input {
+    position: relative;
+    margin-top: 2vw;
+
+}
+
+.footer-form #input input {
+    background-color: transparent;
+    padding: 12px;
+    width: 15vw;
+    font-size: 1vw;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.footer-form #input button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-left: -3px;
+    padding-bottom: 12.5px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+
+.footer-shape1 {
+    position: absolute;
+    width: 93em;
+    height: 33em;
+    top: -12em;
+    bottom: auto;
+    left: -19em;
+    right: auto;
+    background-color: #fe2f06;
+    filter: blur(40px);
+    animation-name: footeranima-shape1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.footer-shape2 {
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: -40em;
+    width: 103em;
+    height: 35em;
+    background-color: #fe2f06;
+    filter: blur(40px);
+    animation-name: footeranima-shape2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes footeranima-shape1 {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes footeranima-shape2 {
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(50deg);
+    }
+}
+
+#footer-bottom {
+    border-top: 1px solid gray;
+    height: 10vh;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+
+#footer-bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-bottom a:hover {
+    text-decoration: underline;
+}
